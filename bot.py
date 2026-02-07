@@ -188,7 +188,7 @@ async def readmyfortune(update: Update, context: ContextTypes.DEFAULT_TYPE):
     res = random.choice(fortunes)
     user_name = update.effective_user.first_name
     user_mention = f"[{user_name}](tg://user?id={update.effective_user.id})"
-    await update.message.reply_text(f"🔮 {user_mention} အတွက် ကံကြမ္မာဟောစာတမ်း -\n\n{res}", parse_mode="Markdown")
+    await update.message.reply_text(f" {user_mention} ✨\n\n{res}", parse_mode="Markdown")
 
 async def readmylove(update: Update, context: ContextTypes.DEFAULT_TYPE):
     res = random.choice(love_fortunes)
@@ -196,9 +196,9 @@ async def readmylove(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_mention = f"[{user_name}](tg://user?id={update.effective_user.id})"
     
     love_text = (
-        f"💖 {user_mention} အတွက် အချစ်ရေးဟောစာတမ်း ✨\n"
+        f"💖 {user_mention} ✨\n"
         "◈━━━━━━━━━━━━━━━━━━◈\n"
-        f"➤ {res}\n"
+        f" {res}\n"
         "◈━━━━━━━━━━━━━━━━━━◈"
     )
     await update.message.reply_text(love_text, parse_mode="Markdown")
@@ -211,14 +211,14 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if query.data == "fortune":
         res = random.choice(fortunes)
-        await query.message.reply_text(f" {user_mention} ➤ \n\n{res}", parse_mode="Markdown")
+        await query.message.reply_text(f" {user_mention} ✨\n\n{res}", parse_mode="Markdown")
     
     elif query.data == "love":
         res = random.choice(love_fortunes)
         love_msg = (
-            f"💖 {user_mention} အတွက် အချစ်ရေးဟောစာတမ်း ✨\n"
+            f"💖 {user_mention} ✨\n"
             "◈━━━━━━━━━━━━━━━━━━◈\n"
-            f"➤ {res}\n"
+            f" {res}\n"
             "◈━━━━━━━━━━━━━━━━━━◈"
         )
         await query.message.reply_text(love_msg, parse_mode="Markdown")
