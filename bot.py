@@ -162,7 +162,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     bot_info = await context.bot.get_me()
     bot_username = bot_info.username
     user_name = update.effective_user.first_name
-    user_mention = f"[{user_name}](tg://user?id={update.effective_user.id})"
+    user_mention = f"[{user_name}]"
     owner_link = f"tg://user?id={OWNER_ID}" if OWNER_ID.isdigit() else f"https://t.me/{OWNER_ID}"
 
     keyboard = [
@@ -171,7 +171,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             InlineKeyboardButton("ဗေဒင်မေးရန် 🔮", callback_data="fortune"),
             InlineKeyboardButton("အချစ်ရေး 💖", callback_data="love")
         ],[
-            InlineKeyboardButton("💞Love Group💞", url=f"https://t.me/{MUSIC_BOT_USER}"),
+            InlineKeyboardButton("💞Love Group💞", url=f"https://t.me/lover_Groupshwe"),
             InlineKeyboardButton("ပိုင်ရှင် 🇲🇲", url=owner_link)
         ],
         [InlineKeyboardButton("လုပ်ဆောင်ချက်များနှင့်အကူအညီများ 🇲🇲", callback_data="help")]
@@ -179,7 +179,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     welcome_text = (
         f"✨ မင်္ဂလာပါ {user_mention}✨\n\n"
-        "◈ ကြိုဆိုပါတယ် 🙏 ပျော်ရွင်ခြင်း (shwemm)\n\n"
+        "◈ ကြိုဆိုပါတယ် 🙏 ပျော်ရွင်ခြင်း (shwemm)မှာ😘\n\n"
         "➤ သင့်ရဲ့ ကံကြမ္မာကို သိရှိနိုင်ဖို့ အောက်က ခလုတ်တွေကို အသုံးပြုနိုင်ပါတယ်ဗျာ။"
     )
     await update.message.reply_text(welcome_text, reply_markup=InlineKeyboardMarkup(keyboard))
@@ -211,7 +211,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if query.data == "fortune":
         res = random.choice(fortunes)
-        await query.message.reply_text(f" {user_mention} အတွက် ကံကြမ္မာဟောစာတမ်း -\n\n{res}", parse_mode="Markdown")
+        await query.message.reply_text(f" {user_mention} ➤ \n\n{res}", parse_mode="Markdown")
     
     elif query.data == "love":
         res = random.choice(love_fortunes)
