@@ -161,6 +161,8 @@ love_fortunes = [
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     bot_info = await context.bot.get_me()
     bot_username = bot_info.username
+    user_name = update.effective_user.first_name
+    user_mention = f"[{user_name}](tg://user?id={update.effective_user.id})"
     owner_link = f"tg://user?id={OWNER_ID}" if OWNER_ID.isdigit() else f"https://t.me/{OWNER_ID}"
 
     keyboard = [
