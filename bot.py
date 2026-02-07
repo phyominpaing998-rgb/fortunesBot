@@ -176,9 +176,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     
     welcome_text = (
-        f"✨🇲🇲 မင်္ဂလာပါ SHWE MM ✨\n\n"
-        "◈🇲🇲 ကြိုဆိုပါတယ် 🙏 SHWE.MM ဗေဒင် 🎶\n\n"
-        "➤🇲🇲 သင့်ရဲ့ ကံကြမ္မာကို သိရှိနိုင်ဖို့ အောက်က ခလုတ်တွေကို အသုံးပြုနိုင်ပါတယ်ဗျာ။"
+        f"✨ မင်္ဂလာပါ {user_mention}✨\n\n"
+        "◈ ကြိုဆိုပါတယ် 🙏 ပျော်ရွင်ခြင်း (shwemm)\n\n"
+        "➤ သင့်ရဲ့ ကံကြမ္မာကို သိရှိနိုင်ဖို့ အောက်က ခလုတ်တွေကို အသုံးပြုနိုင်ပါတယ်ဗျာ။"
     )
     await update.message.reply_text(welcome_text, reply_markup=InlineKeyboardMarkup(keyboard))
 
@@ -226,7 +226,11 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "🇲🇲 SHWE MM ဗေဒင်လမ်းညွှန်\n\n"
             "🔮 ဗေဒင်မေးရန်: /readmyfortune\n"
             "💖 အချစ်ရေးမေးရန်: /readmylove\n"
-            "🎵 Music Bot သို့လည်း သွားနိုင်ပါတယ်ဗျာ။"
+            "🎵 Musicbot များ\n"
+            "➤ @SHWEMM_MUSIC1bot\n"
+            "➤ @SHWEMM_MUSIC2bot\n"
+            "➤ @SHWEMM_MUSIC3bot\n"
+            "➤ @SHWEMM_MUSIC4bot"
         )
         await query.message.reply_text(help_guide, parse_mode="Markdown")
 
@@ -244,5 +248,5 @@ def main():
     print("✅ Bot is running perfectly...")
     app.run_polling()
 
-if name == "main":
+if __name__ == "__main__":
     main()
