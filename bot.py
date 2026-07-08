@@ -171,7 +171,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             InlineKeyboardButton("ဗေဒင်မေးရန် 🔮", callback_data="fortune"),
             InlineKeyboardButton("အချစ်ရေး 💖", callback_data="love")
         ],[
-            InlineKeyboardButton("💞Love Group💞", url=f"https://t.me/lover_Groupshwe"),
+            InlineKeyboardButton("💞Love Group💞", url=f"https://t.me/luxurypartner"),
             InlineKeyboardButton("ပိုင်ရှင် 🇲🇲", url=owner_link)
         ],
         [InlineKeyboardButton("လုပ်ဆောင်ချက်များနှင့်အကူအညီများ 🇲🇲", callback_data="help")]
