@@ -228,11 +228,6 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "🇲🇲 SHWE MM ဗေဒင်လမ်းညွှန်\n\n"
             "🔮 ဗေဒင်မေးရန်: /readmyfortune\n"
             "💖 အချစ်ရေးမေးရန်: /readmylove\n"
-            "🎵 Musicbot များ\n"
-            "➤ @SHWEMM_MUSIC1bot\n"
-            "➤ @SHWEMM_MUSIC2bot\n"
-            "➤ @SHWEMM_MUSIC3bot\n"
-            "➤ @SHWEMM_MUSIC4bot"
         )
         await query.message.reply_text(help_guide, parse_mode="Markdown")
 
