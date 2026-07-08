@@ -179,7 +179,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     welcome_text = (
         f"✨ မင်္ဂလာပါ {user_mention}✨\n\n"
-        "◈ ကြိုဆိုပါတယ် 🙏 ပျော်ရွင်ခြင်း (shwemm)မှာ😘\n\n"
+        "◈ ကြိုဆိုပါတယ် 🙏 ပျော်ရွင်ခြင်း (𝙇𝙪𝙭𝙪𝙧𝙮)မှာ😘\n\n"
         "➤ သင့်ရဲ့ ကံကြမ္မာကို သိရှိနိုင်ဖို့ အောက်က ခလုတ်တွေကို အသုံးပြုနိုင်ပါတယ်ဗျာ။"
     )
     await update.message.reply_text(welcome_text, reply_markup=InlineKeyboardMarkup(keyboard))
